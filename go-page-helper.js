@@ -249,7 +249,7 @@ function makeAjaxRequest(url, query, method, dataType, data, callback, options =
   $.ajax(reqObj);
 }
 
-function PageHelper() {
+function GoPageHelper() {
   return {
     prefillPageData: function () {
       try {
