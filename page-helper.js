@@ -3,11 +3,7 @@ function PageHelper() {
     prefillPageData: function () {
       try {
         var pageData = sessionStorage.getItem('currentPage');
-        const currentUser = JSON.parse(sessionStorage.getItem('currentUser') || '{}');
         var customUIPageData = null;
-        if (interconnectJourney) {
-          customUIPageData = currentUser?.data?.previousRecords ?? {};
-        }
         if (pageData) {
           pageData = JSON.parse(pageData);
           if (pageData.uiConfig?.[0]?.customUIPageData && Object.keys(pageData.uiConfig[0].customUIPageData).length > 0) {
